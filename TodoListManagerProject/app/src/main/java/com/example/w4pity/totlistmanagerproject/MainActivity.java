@@ -25,6 +25,18 @@ public class MainActivity extends AppCompatActivity {
         al_strings.add("this is the first string");
         al_strings.add("this is the second string");
         al_strings.add("this is the third string");
+        al_strings.add("this is the first string");
+        al_strings.add("this is the second string");
+        al_strings.add("this is the third string");
+        al_strings.add("this is the first string");
+        al_strings.add("this is the second string");
+        al_strings.add("this is the third string");
+        al_strings.add("this is the first string");
+        al_strings.add("this is the second string");
+        al_strings.add("this is the third string");
+        al_strings.add("this is the first string");
+        al_strings.add("this is the second string");
+        al_strings.add("this is the third string");
         aa.notifyDataSetChanged();
 
     }
