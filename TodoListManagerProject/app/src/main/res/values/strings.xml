@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Your TodoList</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_button">Add Task</string>
+    <string name="text_newTask">Enter your task here</string>
+
+</resources>
