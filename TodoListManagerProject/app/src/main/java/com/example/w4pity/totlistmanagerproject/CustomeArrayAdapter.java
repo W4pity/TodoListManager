@@ -20,6 +20,7 @@ public class CustomeArrayAdapter extends ArrayAdapter<Task> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Task tv;
         // Get the data item for this position
         Task task = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
@@ -33,6 +34,7 @@ public class CustomeArrayAdapter extends ArrayAdapter<Task> {
         name.setText(task.getName());
         //cb.(task.hometown);
         // Return the completed view to render on screen
+        
         return convertView;
     }
 }
