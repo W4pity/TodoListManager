@@ -1,7 +1,5 @@
 package com.example.w4pity.totlistmanagerproject;
 
-import android.widget.CheckBox;
-import android.widget.TextView;
 
 /**
  * Created by W4pity on 09/03/2016.

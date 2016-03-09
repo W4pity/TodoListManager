@@ -1,12 +1,13 @@
 package com.example.w4pity.totlistmanagerproject;
-
+/*
+This is a TodoList Manager for API 16
+ */
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -29,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
 // make the list view an observer of the array adapter.
         listView.setAdapter(aa);
 // add in 3 strings to the array adapter and ask the list view to update itself
-        Tasks.add(new Task("task 1"));
-        Tasks.add(new Task("task 2"));
-        Tasks.add(new Task("task 3"));
+        Tasks.add(new Task("This is an example of task"));
+        Tasks.add(new Task("Long press on the text to delete one"));
+        Tasks.add(new Task("You can check or uncheck as you want"));
 
         aa.notifyDataSetChanged();
 
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(text.getText().toString()!= "")
+                if(text.getText().length()!= 0)
                     Tasks.add(new Task(text.getText().toString()));
                 aa.notifyDataSetChanged();
                 text.setText("");
