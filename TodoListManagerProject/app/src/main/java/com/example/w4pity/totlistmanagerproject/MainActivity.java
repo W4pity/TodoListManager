@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView listView = (ListView) findViewById(R.id.listView);
+        final ListView listView = (ListView) findViewById(R.id.listView);
         final ArrayList<Task> Tasks = new ArrayList<Task>();
         final CustomeArrayAdapter aa = new CustomeArrayAdapter(this,
                 Tasks);
@@ -35,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            public boolean onItemLongClick(AdapterView<?> arg0, View v,
+                                           int index, long arg3) {
+                Toast.makeText(getApplicationContext(),Tasks.get(index).getName()+" has been removed", Toast.LENGTH_SHORT).show();
+                if(arg0 == listView) {
+                    Tasks.remove(index);
+                    aa.notifyDataSetChanged();
+                    return true;
+                }
+                return false;
+            }
+        });
 
 
         Button add_button = (Button) findViewById(R.id.add_buttom);
